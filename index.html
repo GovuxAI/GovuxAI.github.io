@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Govux — AI-Powered UX Governance for Frontend teams</title>
+  <meta name="description" content="Govux intercepts GitHub pull requests, analyses React/TypeScript code against UX governance rules, scores PRs across five domains, and makes every AI coding session org-aware." />
+  <meta property="og:title" content="Govux — AI-Powered UX Governance" />
+  <meta property="og:description" content="Consistent UX at scale. Governance as invisible scaffolding, not a review tax." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ─── NAV ──────────────────────────────────────────────────────────────── -->
+  <nav class="nav">
+    <div class="nav-inner container">
+      <a href="/" class="nav-logo">
+        <span class="logo-bracket">{</span>
+        <span class="logo-text">GovUX</span>
+        <span class="logo-bracket">}</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#mcp">MCP</a>
+        <a href="#metrics">Impact</a>
+        <a href="https://github.com/GovuxAI/govux" target="_blank" class="nav-cta">GitHub ↗</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ─────────────────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-grid container">
+      <div class="hero-content">
+        <div class="badge">Open Source · MIT · Self-hostable</div>
+        <h1>
+          Consistent UX<br />
+          <span class="gradient-text">at scale.</span>
+        </h1>
+        <p class="hero-sub">
+          Govux is an AI-powered GitHub App that intercepts every pull request,
+          analyses React/TypeScript code across five UX governance domains, scores it
+          0–100, and posts inline review comments — automatically.
+        </p>
+        <div class="hero-actions">
+          <a href="https://github.com/GovuxAI/govux" target="_blank" class="btn btn-primary">
+            Get started free ↗
+          </a>
+          <a href="https://github.com/apps/govux-ux-governance" target="_blank" class="btn btn-secondary">
+            Install GitHub App
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num">5</span>
+            <span class="stat-label">Governance domains</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat">
+            <span class="stat-num">0–100</span>
+            <span class="stat-label">Composite PR score</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat">
+            <span class="stat-num">6</span>
+            <span class="stat-label">MCP tools for AI agents</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="terminal">
+          <div class="terminal-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title">Govux · PR #42 · flightctl-ui</span>
+          </div>
+          <div class="terminal-body">
+            <div class="t-line"><span class="t-dim">[step4]</span> AST done — 12 files, 398 usages</div>
+            <div class="t-line"><span class="t-dim">[step5]</span> Framework: patternfly@6.4.0 — 367 components</div>
+            <div class="t-line"><span class="t-dim">[step7]</span> Spec amendments loaded — 44 approved</div>
+            <div class="t-line"><span class="t-dim">[llm-pass]</span> <span class="t-ok">3 files → 1 batch call via claude-sonnet</span></div>
+            <div class="t-line t-spacer"></div>
+            <div class="t-line"><span class="t-dim">Scores:</span></div>
+            <div class="t-line t-indent"><span class="t-label">accessibility</span> <span class="t-score t-warn">74</span></div>
+            <div class="t-line t-indent"><span class="t-label">designSystem</span> <span class="t-score t-ok">95</span></div>
+            <div class="t-line t-indent"><span class="t-label">performance</span> <span class="t-score t-ok">100</span></div>
+            <div class="t-line t-indent"><span class="t-label">securityUx</span> <span class="t-score t-ok">90</span></div>
+            <div class="t-line t-indent"><span class="t-label">localization</span> <span class="t-score t-ok">94</span></div>
+            <div class="t-line t-spacer"></div>
+            <div class="t-line">
+              <span class="t-badge-pass">✓ PASSED</span>
+              <span class="t-score-final">93 / 100</span>
+              <span class="t-dim">in 5.6s</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── LOGOS / WORKS WITH ────────────────────────────────────────────────── -->
+  <section class="works-with">
+    <div class="container">
+      <p class="works-label">Works with</p>
+      <div class="works-logos">
+        <span class="works-item">PatternFly 5 &amp; 6</span>
+        <span class="works-dot">·</span>
+        <span class="works-item">Material UI 5 &amp; 6</span>
+        <span class="works-dot">·</span>
+        <span class="works-item">Chakra UI</span>
+        <span class="works-dot">·</span>
+        <span class="works-item">React + TypeScript</span>
+        <span class="works-dot">·</span>
+        <span class="works-item">Cursor</span>
+        <span class="works-dot">·</span>
+        <span class="works-item">GitHub Copilot</span>
+        <span class="works-dot">·</span>
+        <span class="works-item">Claude Desktop</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FEATURES ─────────────────────────────────────────────────────────── -->
+  <section class="features section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <h2>Everything governance. Nothing extra.</h2>
+        <p>Purpose-built for React/TypeScript frontend teams — not a generic linter.</p>
+      </div>
+      <div class="features-grid">
+
+        <div class="feature-card">
+          <div class="feature-icon">🔬</div>
+          <h3>AST + Type Resolution</h3>
+          <p>Two-pass Babel + TSC pipeline resolves exact import sources and deprecated prop signatures — not LLM guesses from diff text.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h3>Scored, Domain-Weighted PRs</h3>
+          <p>Composite 0–100 score across Accessibility, Design System, Localization, Security UX, and Performance with configurable per-org weights.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🧠</div>
+          <h3>Spec Memory System</h3>
+          <p>Analyses historical violation patterns to suppress false positives, normalise rule IDs, and escalate recurring real issues — automatically, per org.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🤖</div>
+          <h3>MCP for AI Agents</h3>
+          <p>6 Model Context Protocol tools expose governance state to Cursor, Copilot, and Claude before any code is written — shifting governance left.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🏠</div>
+          <h3>Self-Hostable / On-Prem</h3>
+          <p>MIT-licensed core. No code leaves your network. Critical for enterprises like Red Hat that cannot use external SaaS for code analysis.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">⚙️</div>
+          <h3>Configurable Policy</h3>
+          <p>Per-org ScoringPolicy with weights, thresholds, enforcement modes, pre-existing violation handling, and domain overrides via API or dashboard.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── HOW IT WORKS ─────────────────────────────────────────────────────── -->
+  <section class="how-it-works section" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <h2>How it works</h2>
+        <p>A GitHub App that gets smarter with every PR.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h3>PR opened → webhook fires</h3>
+            <p>GitHub sends a <code>pull_request</code> event. Govux verifies the HMAC signature and enqueues a governance job.</p>
+          </div>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h3>AST pipeline runs</h3>
+            <p>Two-pass Babel + TSC analysis builds a <code>ComponentUsageMap</code> — props, ARIA attributes, import sources, and type-resolved signatures.</p>
+          </div>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h3>Agents analyse + score</h3>
+            <p>Five governance agents run in parallel. LLM pass (optional) adds semantic checks against design-system specs. Violations are diff-baselined: new vs. pre-existing.</p>
+          </div>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <h3>Results posted back</h3>
+            <p>GitHub Check Run passes or fails. Inline review comments pinpoint exact lines. Every 10th analysis the Spec Memory System runs and updates org-specific amendments.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── DOMAINS ───────────────────────────────────────────────────────────── -->
+  <section class="domains section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Five governance domains</h2>
+        <p>Each domain has configurable weight in the composite score.</p>
+      </div>
+      <div class="domains-grid">
+        <div class="domain-card">
+          <div class="domain-icon">♿</div>
+          <div class="domain-info">
+            <h4>Accessibility</h4>
+            <p>ARIA labels, keyboard handlers, contrast, focus management — WCAG 2.2 AA baseline + org overlays.</p>
+          </div>
+          <div class="domain-weight">11%</div>
+        </div>
+        <div class="domain-card">
+          <div class="domain-icon">🎨</div>
+          <div class="domain-info">
+            <h4>Design System</h4>
+            <p>Deprecated components, deprecated props, unknown-framework components, version-specific rules.</p>
+          </div>
+          <div class="domain-weight">18%</div>
+        </div>
+        <div class="domain-card">
+          <div class="domain-icon">🌍</div>
+          <div class="domain-info">
+            <h4>Localization</h4>
+            <p>Hardcoded user-visible strings, missing <code>t()</code> wrappers, untranslated UI text.</p>
+          </div>
+          <div class="domain-weight">8%</div>
+        </div>
+        <div class="domain-card">
+          <div class="domain-icon">🔒</div>
+          <div class="domain-info">
+            <h4>Security UX</h4>
+            <p>Credentials rendered in UI, missing password masking, CSRF exposure — frontend security layer.</p>
+          </div>
+          <div class="domain-weight">28%</div>
+        </div>
+        <div class="domain-card">
+          <div class="domain-icon">⚡</div>
+          <div class="domain-info">
+            <h4>Performance</h4>
+            <p>Unvirtualised large lists, heavy synchronous imports, layout-thrashing inline styles.</p>
+          </div>
+          <div class="domain-weight">35%</div>
+        </div>
+      </div>
+      <p class="domain-note">Default weights shown. Configurable per org via <code>ScoringPolicy</code> API.</p>
+    </div>
+  </section>
+
+  <!-- ─── FEEDBACK LOOP ───────────────────────────────────────────────────────── -->
+  <section class="feedback section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Self-improving feedback loop</h2>
+        <p>Each completed PR makes the next one smarter. Amendments approved once benefit every developer simultaneously.</p>
+      </div>
+      <div class="feedback-flow">
+        <div class="flow-step">
+          <div class="flow-icon">💻</div>
+          <div class="flow-label">Developer opens PR</div>
+          <div class="flow-sub">GitHub webhook fires</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="flow-icon">🤖</div>
+          <div class="flow-label">Govux analyses PR</div>
+          <div class="flow-sub">AST + LLM pass</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="flow-icon">🔬</div>
+          <div class="flow-label">Spec-tuner runs</div>
+          <div class="flow-sub">Detects patterns</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="flow-icon">✅</div>
+          <div class="flow-label">Amendments approved</div>
+          <div class="flow-sub">Human review in dashboard</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="flow-icon">🧩</div>
+          <div class="flow-label">MCP tools updated</div>
+          <div class="flow-sub">Org-calibrated results</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step flow-step-highlight">
+          <div class="flow-icon">🚀</div>
+          <div class="flow-label">AI writes better code</div>
+          <div class="flow-sub">Before PR is opened</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── METRICS CARDS ─────────────────────────────────────────────────────── -->
+  <section class="metric-cards section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Metrics derivable from your existing data</h2>
+        <p>Every KPI Govux generates is built for VP-level reporting — no extra instrumentation needed.</p>
+      </div>
+      <div class="metric-grid">
+
+        <div class="metric-card metric-error">
+          <div class="metric-header">
+            <div class="metric-icon-wrap metric-icon-error">📊</div>
+            <h3>False Positive Rate</h3>
+          </div>
+          <div class="metric-formula">do_not_flag violations ÷ total LLM violations over time</div>
+          <div class="metric-proves metric-proves-error">LLM accuracy improving</div>
+          <p class="metric-comment">As the Spec Memory System learns your codebase, this ratio falls. A drop from 60% → 30% in 90 days is concrete evidence the system is self-calibrating — not just flagging noise indefinitely like a static linter.</p>
+        </div>
+
+        <div class="metric-card metric-success">
+          <div class="metric-header">
+            <div class="metric-icon-wrap metric-icon-success">📉</div>
+            <h3>Noise Reduction %</h3>
+          </div>
+          <div class="metric-formula">violations per PR before vs. after first approved amendments</div>
+          <div class="metric-proves metric-proves-success">Developer time saved</div>
+          <p class="metric-comment">Each approved amendment removes a recurring false-positive class from future PRs. Fewer items to triage = more time shipping features.</p>
+        </div>
+
+        <div class="metric-card metric-primary">
+          <div class="metric-header">
+            <div class="metric-icon-wrap metric-icon-primary">⏱</div>
+            <h3>PR Cycle Time</h3>
+          </div>
+          <div class="metric-formula">time from PR open → Check Run pass, trended over months</div>
+          <div class="metric-proves metric-proves-primary">Faster reviews</div>
+          <p class="metric-comment">As noise decreases, so does the time developers spend re-pushing to clear irrelevant checks — a metric CTO dashboards already track.</p>
+        </div>
+
+        <div class="metric-card metric-warning">
+          <div class="metric-header">
+            <div class="metric-icon-wrap metric-icon-warning">🔁</div>
+            <h3>Repeat Violation Rate</h3>
+          </div>
+          <div class="metric-formula">same rule+component appearing as "new" across consecutive PRs</div>
+          <div class="metric-proves metric-proves-warning">Are devs actually fixing things?</div>
+          <p class="metric-comment">Signal 4 (Escalate) surfaces exactly this. If a violation recurs across 5+ PRs untouched, it's an actionable insight for engineering leadership.</p>
+        </div>
+
+        <div class="metric-card metric-info">
+          <div class="metric-header">
+            <div class="metric-icon-wrap metric-icon-info">✨</div>
+            <h3>Amendment Adoption</h3>
+          </div>
+          <div class="metric-formula">approved amendments count × PRs analysed after approval</div>
+          <div class="metric-proves metric-proves-info">Spec Memory impact</div>
+          <p class="metric-comment">An amendment approved on day 30 that covers 50 subsequent PRs = 50 analysis runs with higher accuracy. This is the compounding ROI story.</p>
+        </div>
+
+        <div class="metric-card metric-secondary">
+          <div class="metric-header">
+            <div class="metric-icon-wrap metric-icon-secondary">🏥</div>
+            <h3>Escalation Resolution</h3>
+          </div>
+          <div class="metric-formula">Signal 4 issues raised vs. issues fixed within N PRs</div>
+          <div class="metric-proves metric-proves-secondary">Real governance health</div>
+          <p class="metric-comment">Resolution rate shows whether governance insights are driving actual code quality improvements — not just generating reports nobody acts on.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── MCP ───────────────────────────────────────────────────────────────── -->
+  <section class="mcp section" id="mcp">
+    <div class="container">
+      <div class="mcp-layout">
+        <div class="mcp-copy">
+          <div class="badge badge-purple">Model Context Protocol</div>
+          <h2>Governance inside every AI coding session</h2>
+          <p>
+            The Govux MCP server exposes 6 tools to Cursor, GitHub Copilot, and Claude Desktop.
+            AI agents query your org's governance state <em>before</em> writing code —
+            not after a PR is opened.
+          </p>
+          <ul class="mcp-tools">
+            <li><code>get_design_system_policy</code> — scoring weights &amp; enforcement mode</li>
+            <li><code>get_component_inventory</code> — components with risk signals</li>
+            <li><code>get_accessibility_policy</code> — WCAG rules + org overlays</li>
+            <li><code>get_violation_history</code> — recurring violation patterns</li>
+            <li><code>check_component</code> — real-time JSX snippet check</li>
+            <li><code>get_spec_amendments</code> — org-learned suppressions</li>
+          </ul>
+          <a href="https://github.com/GovuxAI/govux/tree/main/packages/mcp" target="_blank" class="btn btn-primary">
+            Read MCP docs ↗
+          </a>
+        </div>
+        <div class="mcp-code">
+          <div class="code-block">
+            <div class="code-header">.cursor/mcp.json</div>
+            <pre><code>{
+  "mcpServers": {
+    "govux": {
+      "command": "node",
+      "args": ["packages/mcp/dist/server.js"],
+      "env": {
+        "GOVUX_ORG_ID": "my-org",
+        "DATABASE_URL": "postgres://..."
+      }
+    }
+  }
+}</code></pre>
+          </div>
+          <div class="mcp-benefit">
+            <div class="benefit-icon">💡</div>
+            <p>AI agents in your org share the same calibrated governance knowledge — no per-developer configuration.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- MCP tools table -->
+      <div class="mcp-tools-table">
+        <div class="mcp-table-header">Available MCP tools — what the AI agent sees before writing code</div>
+        <div class="mcp-table-body">
+          <div class="mcp-table-row">
+            <code class="mcp-tool-name">get_component_inventory</code>
+            <span class="mcp-tool-when">Before choosing a component</span>
+            <span class="mcp-tool-value">Knows which components have recurring a11y issues, deprecated props, or hardcoded string patterns in your specific codebase — picks the right one first time.</span>
+          </div>
+          <div class="mcp-table-row">
+            <code class="mcp-tool-name">get_violation_history</code>
+            <span class="mcp-tool-when">Before writing JSX</span>
+            <span class="mcp-tool-value">Sees the top recurring violations for your org (normalised via canonical_id amendments) — avoids repeating patterns the team is actively trying to fix.</span>
+          </div>
+          <div class="mcp-table-row">
+            <code class="mcp-tool-name">check_component</code>
+            <span class="mcp-tool-when">After writing a snippet</span>
+            <span class="mcp-tool-value">Real-time governance check against your org's rules. With do_not_flag amendments wired in, only flags real issues — not historical false positives.</span>
+          </div>
+          <div class="mcp-table-row">
+            <code class="mcp-tool-name">get_accessibility_policy</code>
+            <span class="mcp-tool-when">When implementing interactive UI</span>
+            <span class="mcp-tool-value">Returns your org's WCAG baseline plus any custom a11y overlays — AI agent writes accessible code to your specific standards, not generic WCAG alone.</span>
+          </div>
+          <div class="mcp-table-row">
+            <code class="mcp-tool-name">get_design_system_policy</code>
+            <span class="mcp-tool-when">Before any component work</span>
+            <span class="mcp-tool-value">Scoring weights, enforcement mode, scan config — agent understands what your org values most and prioritises accordingly.</span>
+          </div>
+          <div class="mcp-table-row mcp-table-row-last">
+            <code class="mcp-tool-name">get_spec_amendments</code>
+            <span class="mcp-tool-when">Context loading</span>
+            <span class="mcp-tool-value">Exposes all approved suppressions, canonical IDs, and escalations — agent can reason about what your org has learned and calibrate its output.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SPEC MEMORY ───────────────────────────────────────────────────────── -->
+  <section class="memory section">
+    <div class="container">
+      <div class="section-header">
+        <h2>The LLM finally has memory.</h2>
+        <p>The Spec Memory System analyses historical patterns and generates org-specific prompt amendments.</p>
+      </div>
+      <div class="signals-grid">
+        <div class="signal-card signal-1">
+          <div class="signal-label">Signal 1</div>
+          <h4>Canonical IDs</h4>
+          <p>Same violation gets different <code>ruleId</code> strings across PRs. Picks the most-frequent ID and normalises all history. <span class="auto-tag">Auto-approved</span></p>
+        </div>
+        <div class="signal-card signal-2">
+          <div class="signal-label">Signal 2</div>
+          <h4>Do Not Flag</h4>
+          <p>LLM rule fires exclusively on pre-existing code across 3+ PRs. Suppresses it from future prompts. <span class="auto-tag">Auto-approved at high confidence</span></p>
+        </div>
+        <div class="signal-card signal-3">
+          <div class="signal-label">Signal 3</div>
+          <h4>Skip AST Overlap</h4>
+          <p>LLM duplicates what the AST already found on the same component across 3+ PRs. Removes the duplicate. <span class="auto-tag">Auto-approved</span></p>
+        </div>
+        <div class="signal-card signal-4">
+          <div class="signal-label">Signal 4</div>
+          <h4>Escalate</h4>
+          <p>Real violation recurs as new across 4+ PRs without being fixed. Surfaced for human review in the dashboard. <span class="review-tag">Human review</span></p>
+        </div>
+      </div>
+      <div class="memory-result">
+        <div class="memory-arrow">↓ approved amendments inject into every subsequent LLM prompt ↓</div>
+        <p>Over time: fewer false positives, more accurate scores, AI agents that know what <em>your org</em> has learned.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── METRICS / ROI ─────────────────────────────────────────────────────── -->
+  <section class="metrics section" id="metrics">
+    <div class="container">
+      <div class="section-header">
+        <h2>Measurable ROI</h2>
+        <p>Every metric derivable from data Govux already collects.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-header">
+          <span>Month</span>
+          <span>Violations / PR</span>
+          <span>LLM noise %</span>
+          <span>Status</span>
+        </div>
+        <div class="timeline-row">
+          <span class="t-month">Month 1</span>
+          <div class="t-bar-wrap"><div class="t-bar" style="width:80%"></div></div>
+          <span class="t-pct t-red">60%</span>
+          <span class="t-status">Baseline — no memory</span>
+        </div>
+        <div class="timeline-row">
+          <span class="t-month">Month 2</span>
+          <div class="t-bar-wrap"><div class="t-bar" style="width:76%"></div></div>
+          <span class="t-pct t-orange">55%</span>
+          <span class="t-status">Amendments accumulating</span>
+        </div>
+        <div class="timeline-row timeline-highlight">
+          <span class="t-month">Month 3 ★</span>
+          <div class="t-bar-wrap"><div class="t-bar t-bar-green" style="width:50%"></div></div>
+          <span class="t-pct t-orange">30%</span>
+          <span class="t-status">First amendments approved → noise drops 37%</span>
+        </div>
+        <div class="timeline-row">
+          <span class="t-month">Month 6</span>
+          <div class="t-bar-wrap"><div class="t-bar t-bar-green" style="width:30%"></div></div>
+          <span class="t-pct t-green">18%</span>
+          <span class="t-status">Developers stop seeing familiar false positives</span>
+        </div>
+      </div>
+      <div class="roi-callout">
+        <strong>37% reduction in review noise</strong> — quantifiable for a VP of Engineering.<br />
+        For a team of 10 developers opening 3 PRs/week, that's ~90 fewer false-positive reviews per week.
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── OPEN SOURCE ───────────────────────────────────────────────────────── -->
+  <section class="opensource section">
+    <div class="container">
+      <div class="oss-layout">
+        <div class="oss-card oss-public">
+          <div class="oss-tag">Public · MIT</div>
+          <h3>govux</h3>
+          <p>Self-hostable core — API, worker, AST pipeline, governance agents, MCP server.</p>
+          <ul>
+            <li>Full governance engine</li>
+            <li>GitHub App integration</li>
+            <li>6 MCP tools</li>
+            <li>Spec Memory System plumbing</li>
+            <li>PostgreSQL + Redis + BullMQ</li>
+          </ul>
+          <a href="https://github.com/GovuxAI/govux" target="_blank" class="btn btn-primary">View on GitHub ↗</a>
+        </div>
+        <div class="oss-card oss-cloud">
+          <div class="oss-tag oss-tag-cloud">Private · Enterprise</div>
+          <h3>govux-cloud</h3>
+          <p>Commercial layer — intelligence, dashboard, full LLM specs, enterprise features.</p>
+          <ul>
+            <li>React dashboard with reports &amp; settings</li>
+            <li>Spec Tuner (Signal 1–4 intelligence)</li>
+            <li>Full PatternFly/MUI/Chakra LLM specs</li>
+            <li>Spec Tuning review UI</li>
+            <li>Multi-org support</li>
+          </ul>
+          <a href="mailto:contact@govux.ai" class="btn btn-secondary">Contact us ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CTA ───────────────────────────────────────────────────────────────── -->
+  <section class="cta section">
+    <div class="container">
+      <h2>Governance as invisible scaffolding.</h2>
+      <p>Not a review tax. Not a generic linter. A system that gets smarter with every PR your team opens.</p>
+      <div class="cta-actions">
+        <a href="https://github.com/GovuxAI/govux" target="_blank" class="btn btn-primary btn-lg">
+          Star on GitHub ↗
+        </a>
+        <a href="https://github.com/apps/govux-ux-governance" target="_blank" class="btn btn-outline btn-lg">
+          Install GitHub App
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ────────────────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <span class="logo-bracket">{</span>
+        <span class="logo-text">GovUX</span>
+        <span class="logo-bracket">}</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/GovuxAI/govux" target="_blank">GitHub</a>
+        <a href="https://github.com/GovuxAI/govux/blob/main/README.md" target="_blank">Docs</a>
+        <a href="https://github.com/apps/govux-ux-governance" target="_blank">Install App</a>
+        <a href="mailto:contact@govux.ai">Contact</a>
+      </div>
+      <p class="footer-copy">MIT License · Built for React teams at scale</p>
+    </div>
+  </footer>
+
+</body>
+</html>
